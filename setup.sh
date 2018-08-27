@@ -21,13 +21,18 @@ git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
+# TODO: setup global gitignore
+
 # check for Mac or Linux
 if [[ $(uname) == Darwin ]];
 then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update && brew upgrade
   brew install bat diff-so-fancy fd fzf git htop micro ncdu node pipenv prettyping python2 python3 trash tree vim
-  # link python3
+  # TODO: link python3
 else
+  # TODO: linux installs
   echo "Linux"
 fi
+
+source ~/.bash_profile
