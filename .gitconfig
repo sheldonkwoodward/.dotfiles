@@ -1,0 +1,16 @@
+[user]
+	name = sheldonwoodward
+	email = sheldon.k.woodward@gmail.com
+[core]
+	editor = micro
+	excludesfile = /Users/sheldonwoodward/.gitignore
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[commit]
+	gpgsign = false
+[pager]
+	diff = diff-so-fancy | less --tabs=1,5 -RFX
+	show = diff-so-fancy | less --tabs=1,5 -RFX
