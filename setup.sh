@@ -4,9 +4,9 @@
 CD="$(pwd)"
 
 # hard link files
-ln $CD/.bash_profile $HOME/.bash_profile
-ln $CD/.gitignore_global $HOME/.gitignore_global
-ln $CD/.gitconfig $HOME/.gitconfig
+ln -F $CD/.bash_profile $HOME/.bash_profile
+ln -F $CD/.gitignore_global $HOME/.gitignore_global
+ln -F $CD/.gitconfig $HOME/.gitconfig
 
 # set better git cli colors
 git config --global color.ui true
@@ -26,7 +26,7 @@ if [[ $(uname) == Darwin ]];
 then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update && brew upgrade
-  brew install bat diff-so-fancy fd fzf git htop micro node pipenv prettyping python2 python3 trash tree vim
+  brew install bat diff-so-fancy fd fzf git htop micro ncdu node pipenv prettyping python2 python3 trash tree vim
   # link python3
 else
   echo "Linux"
