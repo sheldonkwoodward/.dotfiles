@@ -21,19 +21,22 @@ git config --global color.diff.old        "red bold"
 git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
-# TODO: setup global gitignore
+# setup global gitignore
 git config --global core.excludesfile ~/.gitignore_global
 
-# TODO: git autocomplete
-
-# TODO: case insensitivity
+# autocompletion case insensitivity
+if [ ! -a ~/.inputrc ];
+then 
+  echo '$include /etc/inputrc' > ~/.inputrc;
+fi
+echo 'set completion-ignore-case On' >> ~/.inputrc
 
 # check for Mac or Linux
 if [[ $(uname) == Darwin ]];
 then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update && brew upgrade
-  brew install bat cowsay diff-so-fancy fd fzf git htop micro ncdu node pipenv prettyping python2 python3 tldr trash tree vim
+  brew install bash-completion bat cowsay diff-so-fancy fd fzf git htop micro ncdu node pipenv prettyping python2 python3 tldr trash tree vim
   # TODO: link python3
 else
   # TODO: linux installs
