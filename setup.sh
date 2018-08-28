@@ -36,7 +36,7 @@ if [[ $(uname) == Darwin ]];
 then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update && brew upgrade
-  brew install bash-completion bat cowsay diff-so-fancy fd fzf git htop micro ncdu node pipenv prettyping python2 python3 tldr trash tree vim
+  brew install bash-completion bat cowsay diff-so-fancy exa fd fzf git htop micro ncdu node pipenv prettyping python2 python3 tldr trash tree vim
   # install xcode command line tools
   xcode-select --install
 
