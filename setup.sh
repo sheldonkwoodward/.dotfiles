@@ -22,6 +22,11 @@ git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
 # TODO: setup global gitignore
+git config --global core.excludesfile ~/.gitignore_global
+
+# TODO: git autocomplete
+
+# TODO: case insensitivity
 
 # check for Mac or Linux
 if [[ $(uname) == Darwin ]];
