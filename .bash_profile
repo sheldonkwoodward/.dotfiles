@@ -49,8 +49,8 @@ function parse_git_dirty {
 	fi
 }
 #git autocomplete
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+if [ -f ~/.git_completion.sh ]; then
+  . ~/.git_completion.sh
 fi
 
 ##############

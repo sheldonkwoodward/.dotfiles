@@ -5,8 +5,9 @@ CD="$(pwd)"
 
 # hard link files
 ln -f $CD/.bash_profile $HOME/.bash_profile
-ln -f $CD/.gitignorel $HOME/.gitignore
+ln -f $CD/.gitignore $HOME/.gitignore
 ln -f $CD/.gitconfig $HOME/.gitconfig
+ln -f $CD/.git_completion.sh $HOME/.git_completion.sh
 
 # set better git cli colors
 git config --global color.ui true
