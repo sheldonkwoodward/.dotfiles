@@ -8,6 +8,7 @@ ln -f $CD/.bash_profile $HOME/.bash_profile
 ln -f $CD/.gitignore $HOME/.gitignore
 ln -f $CD/.gitconfig $HOME/.gitconfig
 ln -f $CD/.git_completion.sh $HOME/.git_completion.sh
+ln -f $CD/.pypirc $HOME/.pypirc
 
 # set better git cli colors
 git config --global color.ui true
@@ -46,5 +47,7 @@ else
   # TODO: linux installs
   echo "Linux"
 fi
+
+pip3 install twine
 
 source ~/.bash_profile
