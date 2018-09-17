@@ -13,6 +13,9 @@ ln -f $CD/.pypirc $HOME/.pypirc
 # create ~/.profile
 touch ~/.profile
 
+# git user configuration
+git config --global user.name "sheldonkwoodward"
+
 # set better git cli colors
 git config --global color.ui true
 git config --global color.diff-highlight.oldNormal    "red bold"
