@@ -10,6 +10,9 @@ ln -f $CD/.gitconfig $HOME/.gitconfig
 ln -f $CD/.git_completion.sh $HOME/.git_completion.sh
 ln -f $CD/.pypirc $HOME/.pypirc
 
+# create ~/.profile
+touch ~/.profile
+
 # set better git cli colors
 git config --global color.ui true
 git config --global color.diff-highlight.oldNormal    "red bold"
