@@ -42,17 +42,22 @@ echo 'set completion-ignore-case On' >> ~/.inputrc
 # check for Mac or Linux
 if [[ $(uname) == Darwin ]];
 then
+  echo "Mac"
+  # install homebrew
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew update && brew upgrade
-  brew install bash-completion bat cowsay diff-so-fancy exa fd fzf git htop micro ncdu node pipenv prettyping python2 python3 tldr trash tree vim
-  # install xcode command line tools
-  xcode-select --install
-
   # TODO: link python3
 else
-  # TODO: linux installs
   echo "Linux"
+  # install linuxbrew
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+  test -d ~/.linuxbrew && PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
+  test -d /home/linuxbrew/.linuxbrew && PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:$PATH"
+  test -r ~/.bash_profile && echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.bash_profile
+  echo "export PATH='$(brew --prefix)/bin:$(brew --prefix)/sbin'":'"$PATH"' >>~/.profile
 fi
+
+brew update && brew upgrade
+brew install bash-completion bat cowsay diff-so-fancy exa fd fzf git htop micro ncdu node pipenv prettyping python2 python3 tldr trash tree vim
 
 pip3 install twine
 
