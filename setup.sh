@@ -55,5 +55,6 @@ else
 fi
 
 pip3 install twine
+npm install -g @angular/cli
 
 source ~/.bash_profile
