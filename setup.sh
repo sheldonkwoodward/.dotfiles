@@ -30,7 +30,7 @@ git config --global color.diff.new        "green bold"
 git config --global color.diff.whitespace "red reverse"
 
 # setup global gitignore
-git config --global core.excludesfile ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore
 
 # autocompletion case insensitivity
 if [ ! -a ~/.inputrc ];
