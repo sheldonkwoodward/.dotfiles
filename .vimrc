@@ -1,5 +1,6 @@
 " PLUGINS
 call plug#begin('~/.vim/plugged')
+Plug 'w0rp/ale'  " ale https://github.com/w0rp/ale
 Plug 'editorconfig/editorconfig-vim'  " editorconfig https://github.com/editorconfig/editorconfig-vim
 Plug '/usr/local/opt/fzf'  " fzf https://github.com/junegunn/fzf.vim
 Plug 'junegunn/fzf.vim'
@@ -11,12 +12,13 @@ Plug 'flazz/vim-colorschemes'  " vim colorschemes https://github.com/flazz/vim-c
 call plug#end()
 
 
-" COMMAND MAPS
-map ; :Files<CR>
-map <C-o> :NERDTreeToggle<CR>
-
-
 " PLUGIN CONFIGS
+" ale config
+map <C-a> :ALEToggle<CR>
+
+" fzf config
+map ; :Files<CR>
+
 " lightline config
 set laststatus=2  " show lightline
 set noshowmode  " hide status in commandline
@@ -28,9 +30,10 @@ let g:lightline = {
   \ }
 
 " nerdtree config
-autocmd StdinReadPre * let s:std_in=1  " auto open nerd tree when no file is specified
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif  " close nerdtree if only window open
+map <C-o> :NERDTreeToggle<CR>
 
 
 " RANDOM
