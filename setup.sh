@@ -53,7 +53,7 @@ else
   echo "Linux"
 fi
 
-pip3 install twine
+pip3 install pylint twine
 npm install -g @angular/cli
 
 source ~/.bash_profile
