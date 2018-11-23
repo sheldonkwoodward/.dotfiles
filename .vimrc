@@ -7,6 +7,7 @@ Plug 'airblade/vim-gitgutter'  " gitgutter https://github.com/airblade/vim-gitgu
 Plug 'itchyny/lightline.vim'  " lightline https://github.com/itchyny/lightline.vim
 Plug 'scrooloose/nerdtree'  " nerdtree https://github.com/scrooloose/nerdtree
 Plug 'tpope/vim-surround'  " surround https://github.com/tpope/vim-surround
+Plug 'flazz/vim-colorschemes'  " vim colorschemes https://github.com/flazz/vim-colorschemes
 call plug#end()
 
 
@@ -34,5 +35,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " RANDOM
 set backspace=indent,eol,start  " fix backspace issue
+colorscheme darth  " editor colorscheme
 set number  " show line numbers
-highlight LineNR ctermfg=gray  " set line numbers to gray color
+

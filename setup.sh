@@ -55,14 +55,17 @@ else
   echo "Linux"
 fi
 
-# install vim-plug
+# setup vim
+mkdir ~/.vim ~/.vim/autoload ~/.vim/plugged
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim -c "PlugInstall" -c qa
+ln -s ~/.vim/plugged/vim-colorschemes/colors ~/.vim/colors
 
 # other installs
 pip3 install pylint twine
 npm install -g @angular/cli
 
+# load bash profile
 source ~/.bash_profile
 
