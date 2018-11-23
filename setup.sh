@@ -9,6 +9,8 @@ ln -f $CD/.gitignore $HOME/.gitignore
 ln -f $CD/.gitconfig $HOME/.gitconfig
 ln -f $CD/.git_completion.sh $HOME/.git_completion.sh
 ln -f $CD/.pypirc $HOME/.pypirc
+ln -f $CD/.vimrc $HOME/.vimrc
+ln -f $CD/.editorconfig $HOME/.editorconfig
 
 # create ~/.profile
 touch ~/.profile
@@ -34,7 +36,7 @@ git config --global core.excludesfile ~/.gitignore
 
 # autocompletion case insensitivity
 if [ ! -a ~/.inputrc ];
-then 
+then
   echo '$include /etc/inputrc' > ~/.inputrc;
 fi
 echo 'set completion-ignore-case On' >> ~/.inputrc
@@ -44,7 +46,7 @@ if [[ $(uname) == Darwin ]];
 then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update && brew upgrade
-  brew install bash-completion bat cowsay diff-so-fancy exa fd fortune fzf git htop lolcat micro ncdu node pipenv prettyping python2 python3 tldr trash tree vim
+  brew install bash-completion bat cowsay diff-so-fancy editorconfig exa fd fortune fzf git htop lolcat micro ncdu node pipenv prettyping python2 python3 tldr trash tree vim
   # install xcode command line tools
   xcode-select --install
 
@@ -53,7 +55,14 @@ else
   echo "Linux"
 fi
 
+# install vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim -c "PlugInstall" -c qa
+
+# other installs
 pip3 install pylint twine
 npm install -g @angular/cli
 
 source ~/.bash_profile
+
