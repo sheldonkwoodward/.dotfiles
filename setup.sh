@@ -5,12 +5,12 @@ CD="$(pwd)"
 
 # hard link files
 ln -f $CD/.bash_profile $HOME/.bash_profile
-ln -f $CD/.gitignore $HOME/.gitignore
-ln -f $CD/.gitconfig $HOME/.gitconfig
+ln -f $CD/.editorconfig $HOME/.editorconfig
 ln -f $CD/.git_completion.sh $HOME/.git_completion.sh
+ln -f $CD/.gitconfig $HOME/.gitconfig
+ln -f $CD/.gitignore $HOME/.gitignore
 ln -f $CD/.pypirc $HOME/.pypirc
 ln -f $CD/.vimrc $HOME/.vimrc
-ln -f $CD/.editorconfig $HOME/.editorconfig
 
 # create ~/.profile
 touch ~/.profile
