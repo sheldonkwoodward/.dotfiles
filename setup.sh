@@ -63,7 +63,7 @@ vim -c "PlugInstall" -c qa
 ln -s ~/.vim/plugged/vim-colorschemes/colors ~/.vim/colors
 
 # other installs
-pip3 install pylint twine
+pip3 install django pylint twine
 npm install -g @angular/cli
 
 # load bash profile
