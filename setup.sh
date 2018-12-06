@@ -66,6 +66,9 @@ ln -s ~/.vim/plugged/vim-colorschemes/colors ~/.vim/colors
 pip3 install django pylint twine
 npm install -g @angular/cli
 
+# bin links
+ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code /usr/local/bin/code
+
 # load bash profile
 source ~/.bash_profile
 

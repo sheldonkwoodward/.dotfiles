@@ -12,6 +12,10 @@ Plug 'flazz/vim-colorschemes'  " vim colorschemes https://github.com/flazz/vim-c
 call plug#end()
 
 
+" GENERAL CONFIG
+" set foldmethod=indent
+
+
 " PLUGIN CONFIGS
 " ale config
 map <C-a> :ALEToggle<CR>
