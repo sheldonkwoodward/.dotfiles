@@ -82,7 +82,7 @@ alias cdcd="cd -"
 alias devenv="deactivate"
 alias dc="docker-compose"
 alias dir="pwd"
-alias dps="docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}\t{{.RunningFor}}"
+alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}\t{{.RunningFor}}'
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias find="fd"
 alias gcm="git commit -m"
@@ -109,3 +109,4 @@ alias top="sudo htop"
 alias uploadpypi="twine upload -r pypi dist/*"
 alias uploadtestpypi="twine upload -r testpypi dist/*"
 alias venv="source .venv*/bin/activate"
+
