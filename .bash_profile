@@ -9,7 +9,7 @@ function parse_git_branch() {
 	if [ ! "${BRANCH}" == "" ]
 	then
 		STAT=`parse_git_dirty`
-		echo "[${BRANCH}${STAT}]"
+		echo "${BRANCH}${STAT}"
 	else
 		echo ""
 	fi
@@ -25,27 +25,27 @@ function parse_git_dirty {
 	deleted=`echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?"`
 	bits=''
 	if [ "${renamed}" == "0" ]; then
-		bits=">${bits}"
+		bits="> ${bits}"
 	fi
 	if [ "${ahead}" == "0" ]; then
-		bits="*${bits}"
+		bits="* ${bits}"
 	fi
 	if [ "${newfile}" == "0" ]; then
-		bits="+${bits}"
+		bits="+ ${bits}"
 	fi
 	if [ "${untracked}" == "0" ]; then
-		bits="?${bits}"
+		bits="? ${bits}"
 	fi
 	if [ "${deleted}" == "0" ]; then
-		bits="x${bits}"
+		bits="x ${bits}"
 	fi
 	if [ "${dirty}" == "0" ]; then
-		bits="!${bits}"
+		bits="! ${bits}"
 	fi
 	if [ ! "${bits}" == "" ]; then
 		echo " ${bits}"
 	else
-		echo ""
+		echo " "
 	fi
 }
 # git autocomplete
@@ -64,7 +64,7 @@ export PS1="$PS1\[\033[38;5;14m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sg
 # current directory
 export PS1="$PS1\[\033[38;5;10m\]\w\[$(tput sgr0)\]"
 # current git branch
-export PS1="$PS1\[\033[38;5;11m\]\`parse_git_branch\` \[$(tput sgr0)\]"
+export PS1="$PS1 \[\033[38;5;11m\]\`parse_git_branch\`\[$(tput sgr0)\]"
 # prompt end character
 export PS1="$PS1> \[$(tput sgr0)\]"
 # colors
@@ -82,7 +82,7 @@ alias cdcd="cd -"
 alias devenv="deactivate"
 alias dc="docker-compose"
 alias dir="pwd"
-alias dps="sudo docker ps"
+alias dps="docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}\t{{.RunningFor}}"
 alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 alias find="fd"
 alias help='tldr'
