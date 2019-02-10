@@ -74,5 +74,8 @@ fabric.properties
 # redis
 *.rdb
 
+# pid files
+*.pid
+
 # VS code
 *.code-workspace
