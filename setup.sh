@@ -63,7 +63,7 @@ fi
 # install brew packages
 brew update && brew upgrade
 brew install bash-completion bat cowsay diff-so-fancy editorconfig exa fd fortune fzf git htop lolcat micro ncdu node pipenv prettyping python2 python3 tldr trash tree vim
-pip3 install twine
+pip3 install twine howdoi
 
 # setup vim
 mkdir ~/.vim ~/.vim/autoload ~/.vim/plugged
