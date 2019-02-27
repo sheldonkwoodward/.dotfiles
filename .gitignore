@@ -79,3 +79,4 @@ fabric.properties
 
 # VS code
 *.code-workspace
+.vscode/
