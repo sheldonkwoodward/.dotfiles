@@ -74,7 +74,7 @@ ln -s ~/.vim/plugged/vim-colorschemes/colors ~/.vim/colors
 
 # other installs
 pip3 install django pylint twine
-npm install -g @angular/cli
+npm install -g @angular/cli @vue/cli
 
 # bin links
 ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code /usr/local/bin/code
