@@ -80,3 +80,6 @@ fabric.properties
 # VS code
 *.code-workspace
 .vscode/
+
+# python venv files
+.venv/
