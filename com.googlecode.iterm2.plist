@@ -48096,17 +48096,17 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>650 588 620 392 0 0 1920 1177 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>598 406 928 394 0 0 1920 1177 </string>
+	<string>598 561 928 394 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>962 0 955 1177 0 0 1920 1177 </string>
-	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2 0 955 1177 0 0 1920 1177 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>962 0 955 1177 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>962 0 955 1177 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>962 0 955 1177 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>2 137 570 451 0 0 1920 1177 </string>
+	<string>2 0 955 1177 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
 	<string>2 726 570 451 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
@@ -48264,12 +48264,16 @@
 			<true/>
 			<key>Background Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.12930664420127869</real>
+				<real>0.133270263671875</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.12036420404911041</real>
+				<real>0.12418365478515629</real>
 				<key>Red Component</key>
-				<real>0.11203488707542419</real>
+				<real>0.11509704589843754</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -49469,7 +49473,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-03-14T16:01:44Z</date>
+	<date>2019-04-06T23:34:57Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -52563,7 +52567,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.7</string>
+	<string>3.2.8</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
