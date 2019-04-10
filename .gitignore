@@ -83,3 +83,6 @@ fabric.properties
 
 # python venv files
 .venv/
+
+# mac files
+.DS_store
